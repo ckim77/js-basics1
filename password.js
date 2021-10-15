@@ -11,7 +11,8 @@ const reader = readline.createInterface({
 });
 
 reader.question("Please enter your password: ", function(password) {
-    if (password.length >= 10) {
+  let passTrim = password.trim()  
+  if (passTrim.length >= 10) {
       console.log(String.raw`
       _  ____ _  _  ___ ___ ____ ____ ____ _   
       / \/ ___) )( \/ __) __|  __) ___) ___) \  
@@ -20,8 +21,9 @@ reader.question("Please enter your password: ", function(password) {
       `);
     } else {
       console.log('Failure :(');
-      reader.question("Please enter your password: ", function(password2) {
-        if (password2.length >= 10) {
+      reader.question("Please enter your password again: ", function(password2) {
+        let passTrim2 = password2.trim()  
+        if (passTrim2.length >= 10) {
           console.log(String.raw`
           _  ____ _  _  ___ ___ ____ ____ ____ _   
           / \/ ___) )( \/ __) __|  __) ___) ___) \  
@@ -31,7 +33,8 @@ reader.question("Please enter your password: ", function(password) {
         } else {
           console.log('Failure :(');
           reader.question('Please enter your password, an incorrect input will lock you from your account: ', function(password3) {
-            if (password3.length >= 10) {
+            let passTrim3 = password3.trim()  
+            if (passTrim3.length >= 10) {
               console.log(String.raw`
               _  ____ _  _  ___ ___ ____ ____ ____ _   
               / \/ ___) )( \/ __) __|  __) ___) ___) \  
@@ -46,7 +49,6 @@ reader.question("Please enter your password: ", function(password) {
       });
     }
   });
-
 
 
   
