@@ -11,9 +11,23 @@ const reader = readline.createInterface({
 
 reader.question("Please enter your password: ", function(password) {
     if (password.length >= 10) {
-      console.log("Success!");
+      console.log('Success!');
     } else {
-      console.log('Failure, please try again.');
+      console.log('Failure :(');
+      reader.question("Please enter your password: ", function(password2) {
+        if (password2.length >= 10) {
+          console.log('Success!');
+        } else {
+          console.log('Failure :(');
+          reader.question('Please enter your password, an incorrect input will lock you from your account: ', function(password3) {
+            if (password3.length >= 10) {
+              console.log('Success!');
+            } else {
+              console.log('Failure, your account has been locked.')
+            }
+          });
+        }
+      });
     }
   });
 
