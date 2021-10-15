@@ -19,8 +19,9 @@ reader.question("Please enter your password: ", function(password) {
       \_/\___ ) \/ ( (_( (__ ) _)\___ \___ \_/  
       (_)(____|____/\___)___|____|____(____(_)  
       `);
+      reader.close();
     } else {
-      console.log('Failure :(');
+      console.log('Your password has to be greater than 10 characters');
       reader.question("Please enter your password again: ", function(password2) {
         let passTrim2 = password2.trim()  
         if (passTrim2.length >= 10) {
@@ -30,8 +31,9 @@ reader.question("Please enter your password: ", function(password) {
           \_/\___ ) \/ ( (_( (__ ) _)\___ \___ \_/  
           (_)(____|____/\___)___|____|____(____(_)  
           `);
+          reader.close();
         } else {
-          console.log('Failure :(');
+          console.log('Your password has to be greater than 10 characters');
           reader.question('Please enter your password, an incorrect input will lock you from your account: ', function(password3) {
             let passTrim3 = password3.trim()  
             if (passTrim3.length >= 10) {
@@ -41,8 +43,10 @@ reader.question("Please enter your password: ", function(password) {
               \_/\___ ) \/ ( (_( (__ ) _)\___ \___ \_/  
               (_)(____|____/\___)___|____|____(____(_)  
               `);
+              reader.close();
             } else {
               console.log('Failure, your account has been locked.')
+              reader.close();
             }
           });
         }
