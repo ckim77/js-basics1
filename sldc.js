@@ -13,7 +13,18 @@
 // Testing & Integration
 
 
+// Answer: Analysis of Requirements, Planning, Design, Testing and Integration, Implementation, Maintenance
+
+
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable for each of the above steps of the Software Development Lifecycle and set the values of each variable to a definition of the step.
 */
+
+let analysisOfRequirements = 'define any prototype system requirements, evaluate alternatives to existing prototypes and perform research to determine the needs of users'
+let planning = 'define the scope of any existing systems, and develop an outline to solve the problem ahead'
+let design = 'develop details for the overall application such as user interfaces, system interfaces, network requirements and databases'
+let testingAndIntegration = 'go over the software to check for bugs or problems'
+let implementation = 'different modules or designs will be integrated into the primary source code through developer efforts, and the information system will be integrated and installed'
+let maintenance = 'handle issues reported by end-users and continually implement changes that the software might need after deployment'
+
